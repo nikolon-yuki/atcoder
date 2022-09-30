@@ -5,18 +5,20 @@ for i, j in inp:
     i -= 1
     j -= 1
     G[i].append(j)
-s = 0
+anss = 0
 
 
-def root(x):
+def root(x, dn, ans):
+    global anss
+    anss += 1
     dn[x] = True
     for i in G[x]:
         if not dn[i]:
-            root(i)
+            root(i, dn, ans)
+    return ans
 
 
 for i in range(N):
-    dn = [False] * N
-    root(i)
-    s += sum(dn)
-print(s)
+    d = [False] * N
+    root(i, d, anss)
+print(anss)
