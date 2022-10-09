@@ -1,2 +1,1 @@
-import math
-print(math.sqrt(4))
+a = 'abc'
