@@ -5,6 +5,9 @@ name = "pypi"
 
 [packages]
 online-judge-tools = "*"
+pandas = "*"
+matplotlib = "*"
+numpy = "*"
 
 [dev-packages]
 
